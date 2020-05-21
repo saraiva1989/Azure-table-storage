@@ -20,18 +20,10 @@ namespace AzureTableStorage.Controllers
             _pessoa = pessoa;
         }
 
-        // GET: api/values
         [HttpGet]
         public IEnumerable<PessoaEntity> Get()
         {
             return _pessoa.ListarTodasPessoas();
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
         }
 
         [HttpPost]
@@ -41,7 +33,6 @@ namespace AzureTableStorage.Controllers
             return _pessoa.ListarPelaChave(pessoaEntity);
         }
 
-        // POST api/values
         [HttpPost]
         public Dictionary<string, string> Post([FromBody] PessoaEntity pessoaEntity)
         {
@@ -73,18 +64,6 @@ namespace AzureTableStorage.Controllers
             {
                 { "Mensagem", mensagem }
             };
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
