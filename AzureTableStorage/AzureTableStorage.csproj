@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <Folder Include="Interface\" />
-    <Folder Include="Service\" />
+    <Folder Include="Repository\" />
     <Folder Include="Model\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
